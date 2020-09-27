@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Author {
+  id: ID!
+  firstName: String!
+  lastName: String!
+}
+
+type Comment {
+  comment: String
+  title: String!
+}
+
+type Query {
+  author(id: ID!): Author!
+}
+
+type Mutation {
+  createAuthor(lastName: String = "", firstName: String): Author!
+  addComment(title: String!, comment: String!): Comment!
+}
+
+type Subscription {
+  commentAdded(title: String!): Comment!
+}
